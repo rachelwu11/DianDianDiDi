@@ -7,10 +7,13 @@
 //
 
 #import "ListTableViewController.h"
+#import "CustomizeCollectionViewController.h"
 
 @interface ListTableViewController ()
 
-@property (nonatomic, strong) NSArray *demoLists;
+@property (nonatomic, strong) NSArray<NSString *> *demoLists;
+@property (nonatomic, strong) NSDictionary<NSString *, UIViewController *> *demoDics;
+
 
 @end
 
@@ -25,9 +28,18 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 
 }
 
-//hide status bar
--(BOOL)prefersStatusBarHidden {
-    return YES;
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+
+    //hide nav bar
+    self.navigationController.navigationBar.hidden = YES;
+}
+
+-(void)viewWillDisappear:(BOOL)animated {
+
+    //show nav bar
+    self.navigationController.navigationBar.hidden = NO;
+    [super viewWillDisappear:animated];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -36,7 +48,7 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 }
 
 #pragma data source of Table View
--(NSArray *)demoLists {
+-(NSArray<NSString *> *)demoLists {
     return @[@"Customize Collection View"];
 }
 
@@ -65,40 +77,17 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
     return cell;
 }
 
+-(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
-}
-*/
+    NSUInteger row = indexPath.row;
+    if (row == 0) {
+//        CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath {
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
+        UICollectionViewLayout *defaultLayout = [[UICollectionViewLayout alloc] init];
+        CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithCollectionViewLayout:defaultLayout];
+        [self.navigationController pushViewController:collectionVC animated:YES];
+    }
 }
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath {
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath {
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
 
 /*
 #pragma mark - Navigation

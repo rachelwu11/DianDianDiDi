@@ -16,6 +16,7 @@
 		CC5F8A761E71128C00857008 /* DianDianDiDiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A751E71128C00857008 /* DianDianDiDiUITests.m */; };
 		CC5F8A851E7115FA00857008 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A841E7115FA00857008 /* ListTableViewController.m */; };
 		CC5F8A881E74A1E700857008 /* CustomizeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A871E74A1E700857008 /* CustomizeCollectionViewController.m */; };
+		CCFB68921E750AD600B3D766 /* listDates.json in Resources */ = {isa = PBXBuildFile; fileRef = CCFB68911E750AD600B3D766 /* listDates.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,7 @@
 		CC5F8A841E7115FA00857008 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		CC5F8A861E74A1E700857008 /* CustomizeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizeCollectionViewController.h; sourceTree = "<group>"; };
 		CC5F8A871E74A1E700857008 /* CustomizeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizeCollectionViewController.m; sourceTree = "<group>"; };
+		CCFB68911E750AD600B3D766 /* listDates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = listDates.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +124,7 @@
 		CC5F8A501E71128C00857008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CCFB68911E750AD600B3D766 /* listDates.json */,
 				CC5F8A511E71128C00857008 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -254,6 +257,7 @@
 				CC5F8A601E71128C00857008 /* LaunchScreen.storyboard in Resources */,
 				CC5F8A5D1E71128C00857008 /* Assets.xcassets in Resources */,
 				CC5F8A5B1E71128C00857008 /* Main.storyboard in Resources */,
+				CCFB68921E750AD600B3D766 /* listDates.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,6 +515,7 @@
 				CC5F8A7C1E71128C00857008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC5F8A7D1E71128C00857008 /* Build configuration list for PBXNativeTarget "DianDianDiDiTests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +524,7 @@
 				CC5F8A7F1E71128C00857008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		CC5F8A801E71128C00857008 /* Build configuration list for PBXNativeTarget "DianDianDiDiUITests" */ = {
 			isa = XCConfigurationList;
@@ -527,6 +533,7 @@
 				CC5F8A821E71128C00857008 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -69,12 +69,22 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
     cell = [cell initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
 
     cell.textLabel.text = [self.demoLists objectAtIndex:indexPath.row];
-    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
-    [dateFormatter setDateFormat:@"yyyy-MMM-dd HH:mm:ss"];
-    //TODO: date means the date when created; not current date
-    NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
-    cell.detailTextLabel.text = dateString;
-    
+    NSString *listDatesPath = [[NSBundle mainBundle] pathForResource:@"listDates" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:listDatesPath];
+    if ([data isKindOfClass:[NSData class]]) {
+        NSError *error = nil;
+        NSDictionary *obj = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        if ([obj isKindOfClass:[NSDictionary class]]) {
+            NSString *cellName = [self.demoLists objectAtIndex:indexPath.row];
+            if ([cellName isKindOfClass:[NSString class]]) {
+                NSString *dateString = [obj objectForKey:cellName];
+                if ([dateString isKindOfClass:[NSString class]]) {
+                    cell.detailTextLabel.text = dateString;
+                }
+            }
+        }
+    }
+
     return cell;
 }
 

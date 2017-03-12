@@ -71,6 +71,7 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
     cell.textLabel.text = [self.demoLists objectAtIndex:indexPath.row];
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MMM-dd HH:mm:ss"];
+    //TODO: date means the date when created; not current date
     NSString *dateString = [dateFormatter stringFromDate:[NSDate date]];
     cell.detailTextLabel.text = dateString;
     
@@ -81,10 +82,9 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 
     NSUInteger row = indexPath.row;
     if (row == 0) {
-//        CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithNibName:nil bundle:[NSBundle mainBundle]];
 
-        UICollectionViewLayout *defaultLayout = [[UICollectionViewLayout alloc] init];
-        CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithCollectionViewLayout:defaultLayout];
+        UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
+        CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
         [self.navigationController pushViewController:collectionVC animated:YES];
     }
 }

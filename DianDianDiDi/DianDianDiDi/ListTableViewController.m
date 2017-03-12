@@ -68,23 +68,9 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     cell = [cell initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:cellIdentifier];
 
-    cell.textLabel.text = [self.demoLists objectAtIndex:indexPath.row];
-    NSString *listDatesPath = [[NSBundle mainBundle] pathForResource:@"listDates" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:listDatesPath];
-    if ([data isKindOfClass:[NSData class]]) {
-        NSError *error = nil;
-        NSDictionary *obj = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        if ([obj isKindOfClass:[NSDictionary class]]) {
-            NSString *cellName = [self.demoLists objectAtIndex:indexPath.row];
-            if ([cellName isKindOfClass:[NSString class]]) {
-                NSString *dateString = [obj objectForKey:cellName];
-                if ([dateString isKindOfClass:[NSString class]]) {
-                    cell.detailTextLabel.text = dateString;
-                }
-            }
-        }
-    }
-
+    NSString *cellName = [self.demoLists objectAtIndex:indexPath.row];
+    cell.textLabel.text = cellName;
+    cell.detailTextLabel.text = [self getDateFromJsonFileWithKey:cellName];
     return cell;
 }
 
@@ -97,6 +83,22 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
         CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
         [self.navigationController pushViewController:collectionVC animated:YES];
     }
+}
+
+-(NSString *)getDateFromJsonFileWithKey:(NSString *)key {
+    if (![key isKindOfClass:[NSString class]]) {
+        return nil;
+    }
+
+    NSString *listDatesPath = [[NSBundle mainBundle] pathForResource:@"listDates" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:listDatesPath];
+    if ([data isKindOfClass:[NSData class]]) {
+        NSError *error = nil;
+        NSDictionary *obj = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        return [obj objectForKey:key];
+    }
+    return nil;
+
 }
 
 /*

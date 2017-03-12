@@ -215,6 +215,7 @@
 				TargetAttributes = {
 					CC5F8A4C1E71128C00857008 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = 282NVW4D43;
 						ProvisioningStyle = Automatic;
 					};
 					CC5F8A651E71128C00857008 = {
@@ -432,6 +433,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 282NVW4D43;
 				INFOPLIST_FILE = DianDianDiDi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.learningS.rwu.DianDianDiDi;
@@ -443,6 +445,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 282NVW4D43;
 				INFOPLIST_FILE = DianDianDiDi/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = edu.learningS.rwu.DianDianDiDi;

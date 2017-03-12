@@ -8,6 +8,7 @@
 
 #import "ListTableViewController.h"
 #import "CustomizeCollectionViewController.h"
+#import "ParseServerDemoViewController.h"
 
 @interface ListTableViewController ()
 
@@ -49,7 +50,7 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 
 #pragma data source of Table View
 -(NSArray<NSString *> *)demoLists {
-    return @[@"Customize Collection View"];
+    return @[@"Customize Collection View", @"Parse Server"];
 }
 
 #pragma mark - Table view data source
@@ -82,6 +83,10 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
         [self.navigationController pushViewController:collectionVC animated:YES];
+    } else if (row == 1) {
+
+        ParseServerDemoViewController *parseVC = [[ParseServerDemoViewController alloc] initWithNibName:@"ParseServerDemoViewController" bundle:[NSBundle mainBundle]];
+        [self.navigationController pushViewController:parseVC animated:YES];
     }
 }
 

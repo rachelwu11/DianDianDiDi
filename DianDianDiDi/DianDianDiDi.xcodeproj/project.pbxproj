@@ -16,6 +16,8 @@
 		CC5F8A761E71128C00857008 /* DianDianDiDiUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A751E71128C00857008 /* DianDianDiDiUITests.m */; };
 		CC5F8A851E7115FA00857008 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A841E7115FA00857008 /* ListTableViewController.m */; };
 		CC5F8A881E74A1E700857008 /* CustomizeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A871E74A1E700857008 /* CustomizeCollectionViewController.m */; };
+		CCC293101E75D864005324D8 /* ParseServerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2930F1E75D864005324D8 /* ParseServerDemoViewController.m */; };
+		CCC293121E75D916005324D8 /* ParseServerDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC293111E75D916005324D8 /* ParseServerDemoViewController.xib */; };
 		CCFB68921E750AD600B3D766 /* listDates.json in Resources */ = {isa = PBXBuildFile; fileRef = CCFB68911E750AD600B3D766 /* listDates.json */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +57,9 @@
 		CC5F8A841E7115FA00857008 /* ListTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListTableViewController.m; sourceTree = "<group>"; };
 		CC5F8A861E74A1E700857008 /* CustomizeCollectionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizeCollectionViewController.h; sourceTree = "<group>"; };
 		CC5F8A871E74A1E700857008 /* CustomizeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizeCollectionViewController.m; sourceTree = "<group>"; };
+		CCC2930E1E75D864005324D8 /* ParseServerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseServerDemoViewController.h; sourceTree = "<group>"; };
+		CCC2930F1E75D864005324D8 /* ParseServerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseServerDemoViewController.m; sourceTree = "<group>"; };
+		CCC293111E75D916005324D8 /* ParseServerDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseServerDemoViewController.xib; sourceTree = "<group>"; };
 		CCFB68911E750AD600B3D766 /* listDates.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = listDates.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -115,8 +120,12 @@
 				CC5F8A5E1E71128C00857008 /* LaunchScreen.storyboard */,
 				CC5F8A611E71128C00857008 /* Info.plist */,
 				CC5F8A501E71128C00857008 /* Supporting Files */,
+				CCFB68911E750AD600B3D766 /* listDates.json */,
 				CC5F8A861E74A1E700857008 /* CustomizeCollectionViewController.h */,
 				CC5F8A871E74A1E700857008 /* CustomizeCollectionViewController.m */,
+				CCC2930E1E75D864005324D8 /* ParseServerDemoViewController.h */,
+				CCC2930F1E75D864005324D8 /* ParseServerDemoViewController.m */,
+				CCC293111E75D916005324D8 /* ParseServerDemoViewController.xib */,
 			);
 			path = DianDianDiDi;
 			sourceTree = "<group>";
@@ -124,7 +133,6 @@
 		CC5F8A501E71128C00857008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				CCFB68911E750AD600B3D766 /* listDates.json */,
 				CC5F8A511E71128C00857008 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -256,6 +264,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5F8A601E71128C00857008 /* LaunchScreen.storyboard in Resources */,
+				CCC293121E75D916005324D8 /* ParseServerDemoViewController.xib in Resources */,
 				CC5F8A5D1E71128C00857008 /* Assets.xcassets in Resources */,
 				CC5F8A5B1E71128C00857008 /* Main.storyboard in Resources */,
 				CCFB68921E750AD600B3D766 /* listDates.json in Resources */,
@@ -286,6 +295,7 @@
 				CC5F8A881E74A1E700857008 /* CustomizeCollectionViewController.m in Sources */,
 				CC5F8A551E71128C00857008 /* AppDelegate.m in Sources */,
 				CC5F8A521E71128C00857008 /* main.m in Sources */,
+				CCC293101E75D864005324D8 /* ParseServerDemoViewController.m in Sources */,
 				CC5F8A851E7115FA00857008 /* ListTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

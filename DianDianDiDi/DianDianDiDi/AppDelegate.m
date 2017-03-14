@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "ListTableViewController.h"
+#import "ParseClientConfiguration.h"
+#import "Parse.h"
 
 @interface AppDelegate ()
 
@@ -24,6 +26,14 @@
     _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     _window.rootViewController = navc;
     [_window makeKeyAndVisible];
+
+
+    ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+        configuration.applicationId = @"edu.learningS.rwu.DianDianDiDi";
+        configuration.server = @"http://localhost:1337/parse";
+    }];
+    [Parse initializeWithConfiguration:configuration];
+    
     return YES;
 }
 

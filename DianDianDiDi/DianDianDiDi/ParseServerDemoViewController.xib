@@ -11,6 +11,8 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ParseServerDemoViewController">
             <connections>
+                <outlet property="passwordTextField" destination="s18-T6-VsY" id="jMF-vu-LLa"/>
+                <outlet property="userNameTextField" destination="alj-aF-NT1" id="BPI-xH-spY"/>
                 <outlet property="view" destination="iN0-l3-epB" id="vYB-mz-bjv"/>
             </connections>
         </placeholder>
@@ -31,12 +33,15 @@
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <nil key="textColor"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                    <textInputTraits key="textInputTraits"/>
+                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                 </textField>
                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NjI-D4-uIK">
                     <rect key="frame" x="166" y="211" width="42" height="30"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                     <state key="normal" title="Log In"/>
+                    <connections>
+                        <action selector="onLoginTapped:" destination="-1" eventType="touchUpInside" id="gUu-d8-WPw"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="New user?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mac-zz-XxR">
                     <rect key="frame" x="96" y="271" width="81" height="21"/>

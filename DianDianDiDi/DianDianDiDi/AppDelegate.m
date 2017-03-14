@@ -28,11 +28,11 @@
     [_window makeKeyAndVisible];
 
 
-    ParseClientConfiguration *configuration = [ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
         configuration.applicationId = @"edu.learningS.rwu.DianDianDiDi";
-        configuration.server = @"http://localhost:1337/parse";
-    }];
-    [Parse initializeWithConfiguration:configuration];
+//        configuration.server = @"http://localhost:1337/parse";
+        configuration.server = @"https://nameless-island-46792.herokuapp.com/parse";
+    }]];
     
     return YES;
 }

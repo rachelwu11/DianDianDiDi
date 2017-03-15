@@ -7,7 +7,7 @@
 //
 
 #import "ParseServerDemoViewController.h"
-#import "PFUser.h"
+//#import <Parse/Parse.h>
 
 @interface ParseServerDemoViewController ()
 @property (strong, nonatomic) IBOutlet UITextField *userNameTextField;
@@ -33,18 +33,18 @@
 
 - (IBAction)onLoginTapped:(id)sender {
 
-    if ([self.userNameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""]) {
-        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Missing Information" message:@"Username and Password fields cannot be empty. Please enter and try again!" preferredStyle:UIAlertControllerStyleAlert];
-        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
-
-        }];
-        [alertController addAction:action];
-        [self presentViewController:alertController animated:YES completion:nil];
-    } else {
-        [PFUser logInWithUsernameInBackground:self.userNameTextField.text password:self.passwordTextField.text block:^(PFUser * _Nullable user, NSError * _Nullable error) {
-            NSLog(@"user:%@, error: %@", user, error);
-        }];
-    }
+//    if ([self.userNameTextField.text isEqualToString:@""] || [self.passwordTextField.text isEqualToString:@""]) {
+//        UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Missing Information" message:@"Username and Password fields cannot be empty. Please enter and try again!" preferredStyle:UIAlertControllerStyleAlert];
+//        UIAlertAction *action = [UIAlertAction actionWithTitle:@"Dismiss" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+//
+//        }];
+//        [alertController addAction:action];
+//        [self presentViewController:alertController animated:YES completion:nil];
+//    } else {
+//        [PFUser logInWithUsernameInBackground:self.userNameTextField.text password:self.passwordTextField.text block:^(PFUser * _Nullable user, NSError * _Nullable error) {
+//            NSLog(@"user:%@, error: %@", user, error);
+//        }];
+//    }
 
 
 

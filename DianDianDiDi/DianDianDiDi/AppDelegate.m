@@ -8,8 +8,7 @@
 
 #import "AppDelegate.h"
 #import "ListTableViewController.h"
-#import "ParseClientConfiguration.h"
-#import "Parse.h"
+//#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -28,12 +27,12 @@
     [_window makeKeyAndVisible];
 
 
-    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
-        configuration.applicationId = @"edu.learningS.rwu.DianDianDiDi";
-//        configuration.server = @"http://localhost:1337/parse";
-        configuration.server = @"https://nameless-island-46792.herokuapp.com/parse";
-    }]];
-    
+//    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {
+//        configuration.applicationId = @"edu.learningS.rwu.DianDianDiDi";
+////        configuration.server = @"http://localhost:1337/parse";
+//        configuration.server = @"https://nameless-island-46792.herokuapp.com/parse";
+//    }]];
+
     return YES;
 }
 

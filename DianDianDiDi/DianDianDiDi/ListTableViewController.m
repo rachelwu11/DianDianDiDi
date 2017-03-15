@@ -102,6 +102,10 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 
         ParseServerDemoViewController *parseVC = [[ParseServerDemoViewController alloc] initWithNibName:@"ParseServerDemoViewController" bundle:[NSBundle mainBundle]];
         [self.navigationController pushViewController:parseVC animated:YES];
+    } else if ([titleOfRow containsString:@"Core Animation"]) {
+
+        CoreAnimationViewController *coreAnimationVC = [[CoreAnimationViewController alloc] init];
+        [self.navigationController pushViewController:coreAnimationVC animated:YES];
     }
 }
 

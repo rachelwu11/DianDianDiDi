@@ -9,11 +9,12 @@
 #import "ListTableViewController.h"
 #import "CustomizeCollectionViewController.h"
 #import "ParseServerDemoViewController.h"
+#import "CoreAnimationViewController.h"
 
 @interface ListTableViewController ()
 
 @property (nonatomic, strong) NSArray<NSString *> *demoLists;
-@property (nonatomic, strong) NSDictionary<NSString *, UIViewController *> *demoDics;
+@property (nonatomic, strong) NSDictionary<NSString *, NSString *> *demoDics;
 
 
 @end
@@ -25,8 +26,20 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self loadJsonData];
+
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
 
+}
+
+-(void)loadJsonData {
+    NSString *listDatesPath = [[NSBundle mainBundle] pathForResource:@"listDates" ofType:@"json"];
+    NSData *data = [NSData dataWithContentsOfFile:listDatesPath];
+    if ([data isKindOfClass:[NSData class]]) {
+        NSError *error = nil;
+        NSDictionary *obj = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
+        self.demoDics = obj;
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -50,7 +63,8 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 
 #pragma data source of Table View
 -(NSArray<NSString *> *)demoLists {
-    return @[@"Customize Collection View", @"Parse Server"];
+    //TODO: NSDictionary objects are unordered to maintain performance
+    return self.demoDics.allKeys;
 }
 
 #pragma mark - Table view data source
@@ -78,12 +92,13 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
 
     NSUInteger row = indexPath.row;
-    if (row == 0) {
+    NSString *titleOfRow = [self.demoLists objectAtIndex:row];
+    if ([titleOfRow containsString:@"Customize Collection View"]) {
 
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
         CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
         [self.navigationController pushViewController:collectionVC animated:YES];
-    } else if (row == 1) {
+    } else if ([titleOfRow containsString:@"Parse"]) {
 
         ParseServerDemoViewController *parseVC = [[ParseServerDemoViewController alloc] initWithNibName:@"ParseServerDemoViewController" bundle:[NSBundle mainBundle]];
         [self.navigationController pushViewController:parseVC animated:YES];
@@ -91,19 +106,7 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 }
 
 -(NSString *)getDateFromJsonFileWithKey:(NSString *)key {
-    if (![key isKindOfClass:[NSString class]]) {
-        return nil;
-    }
-
-    NSString *listDatesPath = [[NSBundle mainBundle] pathForResource:@"listDates" ofType:@"json"];
-    NSData *data = [NSData dataWithContentsOfFile:listDatesPath];
-    if ([data isKindOfClass:[NSData class]]) {
-        NSError *error = nil;
-        NSDictionary *obj = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-        return [obj objectForKey:key];
-    }
-    return nil;
-
+    return [self.demoDics objectForKey:key];
 }
 
 /*

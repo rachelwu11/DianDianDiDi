@@ -10,6 +10,7 @@
 #import "CustomizeCollectionViewController.h"
 #import "ParseServerDemoViewController.h"
 #import "CoreAnimationViewController.h"
+#import "MixScrollViewAndTableViewController.h"
 
 @interface ListTableViewController ()
 
@@ -102,6 +103,8 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
         vc = [[ParseServerDemoViewController alloc] initWithNibName:@"ParseServerDemoViewController" bundle:[NSBundle mainBundle]];
     } else if ([titleOfRow containsString:@"Core Animation"]) {
         vc = [[CoreAnimationViewController alloc] init];
+    } else if ([titleOfRow containsString:@"ScrollView And TableView"]) {
+        vc = [[MixScrollViewAndTableViewController alloc] initWithNibName:nil bundle:nil];
     }
 
     [self.navigationController pushViewController:vc animated:YES];

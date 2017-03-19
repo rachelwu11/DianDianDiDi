@@ -20,11 +20,11 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
 
-    ListTableViewController *listVC = [[ListTableViewController alloc] init];
+    ListTableViewController *listVC = [[UIStoryboard storyboardWithName:@"Main" bundle:nil] instantiateViewControllerWithIdentifier:@"listTableViewIdentity"];
     UINavigationController *navc = [[UINavigationController alloc] initWithRootViewController:listVC];
-    _window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    _window.rootViewController = navc;
-    [_window makeKeyAndVisible];
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    self.window.rootViewController = navc;
+    [self.window makeKeyAndVisible];
 
 
 //    [Parse initializeWithConfiguration:[ParseClientConfiguration configurationWithBlock:^(id<ParseMutableClientConfiguration> configuration) {

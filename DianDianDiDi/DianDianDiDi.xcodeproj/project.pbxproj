@@ -21,6 +21,9 @@
 		CC5F8A851E7115FA00857008 /* ListTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A841E7115FA00857008 /* ListTableViewController.m */; };
 		CC5F8A881E74A1E700857008 /* CustomizeCollectionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A871E74A1E700857008 /* CustomizeCollectionViewController.m */; };
 		CC6C21411E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C21401E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.m */; };
+		CC6C21451E7E2BE600BA7F66 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C21441E7E2BE600BA7F66 /* HeaderView.m */; };
+		CC6C21471E7E2BF200BA7F66 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6C21461E7E2BF200BA7F66 /* HeaderView.xib */; };
+		CC6C214A1E7E2ED400BA7F66 /* SegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C21491E7E2ED400BA7F66 /* SegmentedControl.m */; };
 		CCC293101E75D864005324D8 /* ParseServerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2930F1E75D864005324D8 /* ParseServerDemoViewController.m */; };
 		CCC293121E75D916005324D8 /* ParseServerDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC293111E75D916005324D8 /* ParseServerDemoViewController.xib */; };
 		CCFB68921E750AD600B3D766 /* listDates.json in Resources */ = {isa = PBXBuildFile; fileRef = CCFB68911E750AD600B3D766 /* listDates.json */; };
@@ -69,6 +72,11 @@
 		CC5F8A871E74A1E700857008 /* CustomizeCollectionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizeCollectionViewController.m; sourceTree = "<group>"; };
 		CC6C213F1E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MixScrollViewAndTableViewController.h; sourceTree = "<group>"; };
 		CC6C21401E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MixScrollViewAndTableViewController.m; sourceTree = "<group>"; };
+		CC6C21431E7E2BE600BA7F66 /* HeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HeaderView.h; sourceTree = "<group>"; };
+		CC6C21441E7E2BE600BA7F66 /* HeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HeaderView.m; sourceTree = "<group>"; };
+		CC6C21461E7E2BF200BA7F66 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
+		CC6C21481E7E2ED400BA7F66 /* SegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedControl.h; sourceTree = "<group>"; };
+		CC6C21491E7E2ED400BA7F66 /* SegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedControl.m; sourceTree = "<group>"; };
 		CCC2930E1E75D864005324D8 /* ParseServerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseServerDemoViewController.h; sourceTree = "<group>"; };
 		CCC2930F1E75D864005324D8 /* ParseServerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseServerDemoViewController.m; sourceTree = "<group>"; };
 		CCC293111E75D916005324D8 /* ParseServerDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseServerDemoViewController.xib; sourceTree = "<group>"; };
@@ -154,8 +162,6 @@
 				CCC293111E75D916005324D8 /* ParseServerDemoViewController.xib */,
 				CC2781F81E78F2C300DEC419 /* CoreAnimationViewController.h */,
 				CC2781F91E78F2C300DEC419 /* CoreAnimationViewController.m */,
-				CC6C213F1E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.h */,
-				CC6C21401E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.m */,
 			);
 			path = DianDianDiDi;
 			sourceTree = "<group>";
@@ -163,6 +169,7 @@
 		CC5F8A501E71128C00857008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC6C21421E7E2BB500BA7F66 /* MixScrollViewAndTableView */,
 				CC5F8A511E71128C00857008 /* main.m */,
 			);
 			name = "Supporting Files";
@@ -184,6 +191,20 @@
 				CC5F8A771E71128C00857008 /* Info.plist */,
 			);
 			path = DianDianDiDiUITests;
+			sourceTree = "<group>";
+		};
+		CC6C21421E7E2BB500BA7F66 /* MixScrollViewAndTableView */ = {
+			isa = PBXGroup;
+			children = (
+				CC6C213F1E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.h */,
+				CC6C21401E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.m */,
+				CC6C21431E7E2BE600BA7F66 /* HeaderView.h */,
+				CC6C21441E7E2BE600BA7F66 /* HeaderView.m */,
+				CC6C21461E7E2BF200BA7F66 /* HeaderView.xib */,
+				CC6C21481E7E2ED400BA7F66 /* SegmentedControl.h */,
+				CC6C21491E7E2ED400BA7F66 /* SegmentedControl.m */,
+			);
+			name = MixScrollViewAndTableView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -296,6 +317,7 @@
 				CC5F8A601E71128C00857008 /* LaunchScreen.storyboard in Resources */,
 				CCC293121E75D916005324D8 /* ParseServerDemoViewController.xib in Resources */,
 				CC5F8A5D1E71128C00857008 /* Assets.xcassets in Resources */,
+				CC6C21471E7E2BF200BA7F66 /* HeaderView.xib in Resources */,
 				CC5F8A5B1E71128C00857008 /* Main.storyboard in Resources */,
 				CCFB68921E750AD600B3D766 /* listDates.json in Resources */,
 			);
@@ -325,6 +347,8 @@
 				CC5F8A881E74A1E700857008 /* CustomizeCollectionViewController.m in Sources */,
 				CC5F8A551E71128C00857008 /* AppDelegate.m in Sources */,
 				CC5F8A521E71128C00857008 /* main.m in Sources */,
+				CC6C21451E7E2BE600BA7F66 /* HeaderView.m in Sources */,
+				CC6C214A1E7E2ED400BA7F66 /* SegmentedControl.m in Sources */,
 				CCC293101E75D864005324D8 /* ParseServerDemoViewController.m in Sources */,
 				CC2781FA1E78F2C300DEC419 /* CoreAnimationViewController.m in Sources */,
 				CC5F8A851E7115FA00857008 /* ListTableViewController.m in Sources */,

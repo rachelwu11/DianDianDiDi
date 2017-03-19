@@ -93,20 +93,19 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 
     NSUInteger row = indexPath.row;
     NSString *titleOfRow = [self.demoLists objectAtIndex:row];
+
+    UIViewController *vc = nil;
     if ([titleOfRow containsString:@"Customize Collection View"]) {
-
         UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc] init];
-        CustomizeCollectionViewController *collectionVC = [[CustomizeCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
-        [self.navigationController pushViewController:collectionVC animated:YES];
+        vc = [[CustomizeCollectionViewController alloc] initWithCollectionViewLayout:flowLayout];
     } else if ([titleOfRow containsString:@"Parse"]) {
-
-        ParseServerDemoViewController *parseVC = [[ParseServerDemoViewController alloc] initWithNibName:@"ParseServerDemoViewController" bundle:[NSBundle mainBundle]];
-        [self.navigationController pushViewController:parseVC animated:YES];
+        vc = [[ParseServerDemoViewController alloc] initWithNibName:@"ParseServerDemoViewController" bundle:[NSBundle mainBundle]];
     } else if ([titleOfRow containsString:@"Core Animation"]) {
-
-        CoreAnimationViewController *coreAnimationVC = [[CoreAnimationViewController alloc] init];
-        [self.navigationController pushViewController:coreAnimationVC animated:YES];
+        vc = [[CoreAnimationViewController alloc] init];
     }
+
+    [self.navigationController pushViewController:vc animated:YES];
+
 }
 
 -(NSString *)getDateFromJsonFileWithKey:(NSString *)key {

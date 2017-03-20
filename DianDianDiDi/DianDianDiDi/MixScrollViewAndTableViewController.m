@@ -13,6 +13,8 @@
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
 #define defaultColor [UIColor colorWithWhite:0.998 alpha:1]
 
+#define MAXValue(a, b, c) a > b ? (a > c ? a : c) : (b > c ? b : c)
+
 @interface MixScrollViewAndTableViewController ()<UITableViewDelegate, UITableViewDataSource>
 
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -76,6 +78,7 @@
 -(UITableView *)tableViewWithX:(CGFloat)x {
 
     UITableView *tableView = [[UITableView alloc] initWithFrame:CGRectMake(x, 0, ScreenWidth, ScreenHeight) style:UITableViewStylePlain];
+    [self.scrollView addSubview:tableView];
     tableView.backgroundColor = defaultColor;
     tableView.showsVerticalScrollIndicator = NO;
     tableView.delegate = self;
@@ -126,6 +129,41 @@
             CGRect frame = self.headerView.frame;
             frame.origin.y = -150;
             self.headerView.frame = frame;
+        }
+    }
+
+    //avatar
+    CGFloat scale = scrollView.contentOffset.y / 80;
+    if (scrollView.contentOffset.y > 80) {
+        scale = 1;
+    } else if (scrollView.contentOffset.y <= 0) {
+        scale = 0;
+    }
+
+    self.avatar.transform = CGAffineTransformMakeScale(2 - scale, 2 - scale);
+
+    CGRect frame = self.avatar.frame;
+    frame.origin.y = (1 - scale) * 8;
+    self.avatar.frame = frame;
+}
+
+-(void)scrollViewWillBeginDragging:(UIScrollView *)scrollView {
+    if (scrollView == self.scrollView) {
+        [self reloadMaxOffsetY];
+    }
+}
+
+-(void)reloadMaxOffsetY {
+    CGFloat maxOffsetY = MAXValue(self.leftTableView.contentOffset.y, self.middleTableView.contentOffset.y, self.rightTableView.contentOffset.y);
+    if (maxOffsetY > 150) {
+        if (self.leftTableView.contentOffset.y < 150) {
+            self.leftTableView.contentOffset = CGPointMake(0, 150);
+        }
+        if (self.middleTableView.contentOffset.y < 150) {
+            self.middleTableView.contentOffset = CGPointMake(0, 150);
+        }
+        if (self.rightTableView.contentOffset.y < 150) {
+            self.rightTableView.contentOffset = CGPointMake(0, 150);
         }
     }
 }

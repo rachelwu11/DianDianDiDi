@@ -24,6 +24,7 @@
 		CC6C21451E7E2BE600BA7F66 /* HeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C21441E7E2BE600BA7F66 /* HeaderView.m */; };
 		CC6C21471E7E2BF200BA7F66 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = CC6C21461E7E2BF200BA7F66 /* HeaderView.xib */; };
 		CC6C214A1E7E2ED400BA7F66 /* SegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C21491E7E2ED400BA7F66 /* SegmentedControl.m */; };
+		CC6C21501E7F86F000BA7F66 /* CustomizedSegmentedControl.m in Sources */ = {isa = PBXBuildFile; fileRef = CC6C214F1E7F86F000BA7F66 /* CustomizedSegmentedControl.m */; };
 		CCC293101E75D864005324D8 /* ParseServerDemoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CCC2930F1E75D864005324D8 /* ParseServerDemoViewController.m */; };
 		CCC293121E75D916005324D8 /* ParseServerDemoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = CCC293111E75D916005324D8 /* ParseServerDemoViewController.xib */; };
 		CCFB68921E750AD600B3D766 /* listDates.json in Resources */ = {isa = PBXBuildFile; fileRef = CCFB68911E750AD600B3D766 /* listDates.json */; };
@@ -77,6 +78,8 @@
 		CC6C21461E7E2BF200BA7F66 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 		CC6C21481E7E2ED400BA7F66 /* SegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SegmentedControl.h; sourceTree = "<group>"; };
 		CC6C21491E7E2ED400BA7F66 /* SegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SegmentedControl.m; sourceTree = "<group>"; };
+		CC6C214E1E7F86F000BA7F66 /* CustomizedSegmentedControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CustomizedSegmentedControl.h; sourceTree = "<group>"; };
+		CC6C214F1E7F86F000BA7F66 /* CustomizedSegmentedControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CustomizedSegmentedControl.m; sourceTree = "<group>"; };
 		CCC2930E1E75D864005324D8 /* ParseServerDemoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ParseServerDemoViewController.h; sourceTree = "<group>"; };
 		CCC2930F1E75D864005324D8 /* ParseServerDemoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ParseServerDemoViewController.m; sourceTree = "<group>"; };
 		CCC293111E75D916005324D8 /* ParseServerDemoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ParseServerDemoViewController.xib; sourceTree = "<group>"; };
@@ -203,6 +206,8 @@
 				CC6C21461E7E2BF200BA7F66 /* HeaderView.xib */,
 				CC6C21481E7E2ED400BA7F66 /* SegmentedControl.h */,
 				CC6C21491E7E2ED400BA7F66 /* SegmentedControl.m */,
+				CC6C214E1E7F86F000BA7F66 /* CustomizedSegmentedControl.h */,
+				CC6C214F1E7F86F000BA7F66 /* CustomizedSegmentedControl.m */,
 			);
 			name = MixScrollViewAndTableView;
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				CC2781FA1E78F2C300DEC419 /* CoreAnimationViewController.m in Sources */,
 				CC5F8A851E7115FA00857008 /* ListTableViewController.m in Sources */,
 				CC6C21411E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.m in Sources */,
+				CC6C21501E7F86F000BA7F66 /* CustomizedSegmentedControl.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -10,6 +10,23 @@
 
 #define ButtonTag 111
 
+#define CSColor(r, g, b) [UIColor colorWithRed: (r) / 255.0 green: (g) / 255.0 blue: (b) / 255.0 alpha: 1.0]
+
+void getRGBValue(CGFloat colorArr[3], UIColor *color) {
+    unsigned char data[4];
+    size_t width = 1, height = 1, bitsPerComponent = 8, bytesPerRow = 4;
+    CGColorSpaceRef space = CGColorSpaceCreateDeviceRGB();
+    uint32_t bitmapInfo = 1;
+    CGContextRef context = CGBitmapContextCreate(&data, width, height, bitsPerComponent, bytesPerRow, space, bitmapInfo);
+    CGContextSetFillColorWithColor(context, [color CGColor]);
+    CGContextFillRect(context, CGRectMake(0, 0, 1, 1));
+    CGContextRelease(context);
+    CGColorSpaceRelease(space);
+    for (NSInteger i = 0; i < 3; i++) {
+        colorArr[i] = data[i];
+    }
+}
+
 @interface CustomizedSegmentedControl()
 @property (nonatomic, strong) NSArray<NSString *> *titles;
 @property (nonatomic, strong) NSMutableArray<UIButton *> *allButtons;

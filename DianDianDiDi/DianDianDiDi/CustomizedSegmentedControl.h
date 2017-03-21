@@ -10,6 +10,11 @@
 
 @interface CustomizedSegmentedControl : UIView
 
--(id)initWithTitles:(NSArray <NSString *> *)titles frame:(CGRect)frame;
+@property (nonatomic, strong) void(^titleClicked)(NSInteger index);
+@property (nonatomic, strong) UIColor *selectedColor;
+@property (nonatomic, strong) UIColor *deselectedColor;
+
+-(void)setContentOffset:(CGPoint)contentOffset;
+-(id)initWithTitles:(NSArray <NSString *> *)titles frame:(CGRect)frame titleClicked:(void(^)(NSInteger index))tClicked;
 
 @end

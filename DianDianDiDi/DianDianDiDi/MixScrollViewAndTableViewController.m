@@ -8,6 +8,7 @@
 
 #import "MixScrollViewAndTableViewController.h"
 #import "HeaderView.h"
+#import "CustomizedSegmentedControl.h"
 
 #define ScreenWidth [UIScreen mainScreen].bounds.size.width
 #define ScreenHeight [UIScreen mainScreen].bounds.size.height
@@ -23,6 +24,7 @@
 @property (nonatomic, strong) UITableView *rightTableView;
 @property (nonatomic, strong) UIView *headerView;
 @property (nonatomic, strong) UIImageView *avatar;
+@property (nonatomic, strong) CustomizedSegmentedControl *segmentControl;
 
 @end
 
@@ -48,11 +50,17 @@
     //HeaderView
     HeaderView *header = [HeaderView headerView:CGRectMake(0, 0, ScreenWidth, 150)];
 
-    //TODO: add segment control
+    __weak MixScrollViewAndTableViewController *weakSelf = self;
+    CustomizedSegmentedControl *segmentedControl = [[CustomizedSegmentedControl alloc] initWithTitles:@[@"Moments", @"Articles", @"More"] frame:CGRectMake(0, CGRectGetMaxY(header.frame), ScreenWidth, 44) titleClicked:^(NSInteger index) {
+        weakSelf.scrollView.contentOffset = CGPointMake(ScreenWidth * index, 0);
+        [weakSelf reloadMaxOffsetY];
+    }];
+    self.segmentControl = segmentedControl;
 
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 194)];
     headerView.backgroundColor = defaultColor;
     [headerView addSubview:header];
+    [headerView addSubview:segmentedControl];
     self.headerView = headerView;
     [self.view addSubview:self.headerView];
 
@@ -130,6 +138,11 @@
             frame.origin.y = -150;
             self.headerView.frame = frame;
         }
+    }
+
+    //segment control
+    if (self.scrollView == scrollView) {
+        [self.segmentControl setContentOffset:CGPointMake(self.scrollView.contentOffset.x / 3, 0)];
     }
 
     //avatar

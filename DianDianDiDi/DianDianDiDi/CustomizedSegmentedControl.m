@@ -30,6 +30,7 @@ void getRGBValue(CGFloat colorArr[3], UIColor *color) {
 @interface CustomizedSegmentedControl()
 @property (nonatomic, strong) NSArray<NSString *> *titles;
 @property (nonatomic, strong) NSMutableArray<UIButton *> *allButtons;
+@property (nonatomic, strong) UIButton *selectedButton;
 
 @end
 
@@ -48,6 +49,7 @@ void getRGBValue(CGFloat colorArr[3], UIColor *color) {
 
     [self setUpAllButtons];
     [self onButtonClicked:[self viewWithTag:ButtonTag]];    //default, index 0 is selected
+    [self setUpBottomSliderView];
 
 }
 
@@ -74,6 +76,16 @@ void getRGBValue(CGFloat colorArr[3], UIColor *color) {
     }
 }
 
+-(void)setUpBottomSliderView {
+
+    CGFloat w = self.frame.size.width / self.titles.count;
+    CGFloat h = self.frame.size.height;
+    UIView *sliderView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, w, h)];
+    [self addSubview:sliderView];
+    self.bottomSliderView = sliderView;
+    sliderView.backgroundColor = self.selectedColor;
+}
+
 -(void)onButtonClicked:(UIButton *)sender {
 
     NSInteger selectedIndex = sender.tag - ButtonTag;
@@ -82,6 +94,7 @@ void getRGBValue(CGFloat colorArr[3], UIColor *color) {
         self.titleClicked(selectedIndex);
     }
 
+    self.selectedButton = self.allButtons[selectedIndex];
     [self setUpButtonColorsWithSelectedIndex:selectedIndex];
 
 }
@@ -98,9 +111,44 @@ void getRGBValue(CGFloat colorArr[3], UIColor *color) {
 
 -(void)setContentOffset:(CGPoint)contentOffset {
 
-    CGFloat width = self.frame.size.width / self.allButtons.count;
+    CGRect frame = self.bottomSliderView.frame;
+    frame.origin.x = contentOffset.x;
+    self.bottomSliderView.frame = frame;
 
+    NSMutableArray *buttonArr = [NSMutableArray array];
+    for (UIButton *button in self.allButtons) {
+        CGFloat overLapWidth = CGRectIntersection(button.frame, self.bottomSliderView.frame).size.width;
+        if (overLapWidth > 0) {
+            [buttonArr addObject:button];
+        }
+    }
+
+    if (buttonArr.count > 1) {
+        UIButton *leftButton = buttonArr.firstObject;
+        UIButton *rightButton = buttonArr.lastObject;
+
+        [leftButton setTitleColor:CSColor([self getRGBValueWithIndex:0 button:leftButton], [self getRGBValueWithIndex:1 button:leftButton], [self getRGBValueWithIndex:2 button:leftButton]) forState:UIControlStateNormal];
+
+        [rightButton setTitleColor:CSColor([self getRGBValueWithIndex:0 button:rightButton], [self getRGBValueWithIndex:1 button:rightButton], [self getRGBValueWithIndex:2 button:rightButton]) forState:UIControlStateNormal];
+
+    }
     
+}
+
+-(CGFloat)getRGBValueWithIndex:(NSInteger)index button:(UIButton *)button {
+    CGFloat leftRGB[3];
+    CGFloat rightRGB[3];
+    getRGBValue(leftRGB, self.deselectedColor);
+    getRGBValue(rightRGB, self.selectedColor);
+
+    CGFloat overLapWidth = CGRectIntersection(button.frame, self.bottomSliderView.frame).size.width;
+    CGFloat value = overLapWidth / button.frame.size.width;
+    if ([button isEqual:self.selectedButton]) {
+        return leftRGB[index] + value * (leftRGB[index] - rightRGB[index]);
+    } else {
+        return rightRGB[index] + (1 - value) * (leftRGB[index] - rightRGB[index]);
+    }
+
 }
 
 -(UIColor *)selectedColor {

@@ -13,6 +13,7 @@
 @property (nonatomic, strong) void(^titleClicked)(NSInteger index);
 @property (nonatomic, strong) UIColor *selectedColor;
 @property (nonatomic, strong) UIColor *deselectedColor;
+@property (nonatomic, strong) UIView *bottomSliderView;
 
 -(void)setContentOffset:(CGPoint)contentOffset;
 -(id)initWithTitles:(NSArray <NSString *> *)titles frame:(CGRect)frame titleClicked:(void(^)(NSInteger index))tClicked;

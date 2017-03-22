@@ -57,6 +57,11 @@
     }];
     self.segmentControl = segmentedControl;
 
+    CGRect frame = segmentedControl.bottomSliderView.frame;
+    frame.origin.y = frame.size.height - 1.5;
+    frame.size.height = 1;
+    segmentedControl.bottomSliderView.frame = frame;
+
     UIView *headerView = [[UIView alloc] initWithFrame:CGRectMake(0, 0, ScreenWidth, 194)];
     headerView.backgroundColor = defaultColor;
     [headerView addSubview:header];

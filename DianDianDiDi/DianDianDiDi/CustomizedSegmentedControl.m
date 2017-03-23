@@ -130,9 +130,11 @@ void getRGBValue(CGFloat colorArr[3], UIColor *color) {
         [leftButton setTitleColor:CSColor([self getRGBValueWithIndex:0 button:leftButton], [self getRGBValueWithIndex:1 button:leftButton], [self getRGBValueWithIndex:2 button:leftButton]) forState:UIControlStateNormal];
 
         [rightButton setTitleColor:CSColor([self getRGBValueWithIndex:0 button:rightButton], [self getRGBValueWithIndex:1 button:rightButton], [self getRGBValueWithIndex:2 button:rightButton]) forState:UIControlStateNormal];
-
     }
-    
+
+    //reset selected button
+    self.selectedButton = [self viewWithTag:(NSInteger)ButtonTag + self.bottomSliderView.center.x / (self.frame.size.width / self.titles.count)];
+
 }
 
 -(CGFloat)getRGBValueWithIndex:(NSInteger)index button:(UIButton *)button {
@@ -144,7 +146,7 @@ void getRGBValue(CGFloat colorArr[3], UIColor *color) {
     CGFloat overLapWidth = CGRectIntersection(button.frame, self.bottomSliderView.frame).size.width;
     CGFloat value = overLapWidth / button.frame.size.width;
     if ([button isEqual:self.selectedButton]) {
-        return leftRGB[index] + value * (leftRGB[index] - rightRGB[index]);
+        return leftRGB[index] + value * (rightRGB[index] - leftRGB[index]);
     } else {
         return rightRGB[index] + (1 - value) * (leftRGB[index] - rightRGB[index]);
     }

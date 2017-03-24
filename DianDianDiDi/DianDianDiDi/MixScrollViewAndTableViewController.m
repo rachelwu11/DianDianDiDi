@@ -57,6 +57,13 @@
     }];
     self.segmentControl = segmentedControl;
 
+    for (NSInteger i = 0; i < 2; i++) {
+        UIView *line = [UIView new];
+        line.backgroundColor = [UIColor colorWithRed:228/255.0 green:227/255.0 blue:230/255.0 alpha:1];
+        line.frame = CGRectMake(0, 43.5 * i, ScreenWidth, 0.5);
+        [self.segmentControl addSubview:line];
+    }
+
     CGRect frame = segmentedControl.bottomSliderView.frame;
     frame.origin.y = frame.size.height - 1.5;
     frame.size.height = 1;
@@ -146,8 +153,9 @@
     }
 
     //segment control
-    if (self.scrollView == scrollView) {
+    if (scrollView == self.scrollView) {
         [self.segmentControl setContentOffset:CGPointMake(self.scrollView.contentOffset.x / 3, 0)];
+        return;
     }
 
     //avatar

@@ -11,6 +11,7 @@
 #import "ParseServerDemoViewController.h"
 #import "CoreAnimationViewController.h"
 #import "MixScrollViewAndTableViewController.h"
+#import "ImageProcessingDemoViewController.h"
 
 @interface ListTableViewController ()
 
@@ -104,7 +105,9 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
     } else if ([titleOfRow containsString:@"Core Animation"]) {
         vc = [[CoreAnimationViewController alloc] init];
     } else if ([titleOfRow containsString:@"ScrollView And TableView"]) {
-        vc = [[MixScrollViewAndTableViewController alloc] initWithNibName:nil bundle:nil];
+        vc = [[MixScrollViewAndTableViewController alloc] init];
+    } else if ([titleOfRow containsString:@"Image Processing"]) {
+        vc = [[ImageProcessingDemoViewController alloc] init];
     }
 
     [self.navigationController pushViewController:vc animated:YES];

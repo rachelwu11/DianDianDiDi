@@ -12,6 +12,12 @@
 		CC2781F71E77B1CA00DEC419 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2781F41E77B1CA00DEC419 /* ParseUI.framework */; };
 		CC2781FA1E78F2C300DEC419 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2781F91E78F2C300DEC419 /* CoreAnimationViewController.m */; };
 		CC37322E1E9EFB7C0006E6F7 /* DesignPatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37322D1E9EFB7C0006E6F7 /* DesignPatternViewController.m */; };
+		CC3732321E9EFC3E0006E6F7 /* Album.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3732311E9EFC3E0006E6F7 /* Album.m */; };
+		CC3732351E9EFCF80006E6F7 /* AlbumView.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3732341E9EFCF80006E6F7 /* AlbumView.m */; };
+		CC37323C1E9EFFCE0006E6F7 /* LibraryAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37323B1E9EFFCE0006E6F7 /* LibraryAPI.m */; };
+		CC37323F1E9F047A0006E6F7 /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37323E1E9F047A0006E6F7 /* PersistencyManager.m */; };
+		CC3732421E9F06DA0006E6F7 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3732411E9F06D90006E6F7 /* HTTPClient.m */; };
+		CC3732451E9F1FC30006E6F7 /* Album+TableRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3732441E9F1FC30006E6F7 /* Album+TableRepresentation.m */; };
 		CC5F8A521E71128C00857008 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A511E71128C00857008 /* main.m */; };
 		CC5F8A551E71128C00857008 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A541E71128C00857008 /* AppDelegate.m */; };
 		CC5F8A5B1E71128C00857008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5F8A591E71128C00857008 /* Main.storyboard */; };
@@ -56,6 +62,18 @@
 		CC2781F91E78F2C300DEC419 /* CoreAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationViewController.m; sourceTree = "<group>"; };
 		CC37322C1E9EFB7C0006E6F7 /* DesignPatternViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignPatternViewController.h; sourceTree = "<group>"; };
 		CC37322D1E9EFB7C0006E6F7 /* DesignPatternViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignPatternViewController.m; sourceTree = "<group>"; };
+		CC3732301E9EFC3E0006E6F7 /* Album.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Album.h; sourceTree = "<group>"; };
+		CC3732311E9EFC3E0006E6F7 /* Album.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Album.m; sourceTree = "<group>"; };
+		CC3732331E9EFCF80006E6F7 /* AlbumView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AlbumView.h; sourceTree = "<group>"; };
+		CC3732341E9EFCF80006E6F7 /* AlbumView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AlbumView.m; sourceTree = "<group>"; };
+		CC37323A1E9EFFCE0006E6F7 /* LibraryAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LibraryAPI.h; sourceTree = "<group>"; };
+		CC37323B1E9EFFCE0006E6F7 /* LibraryAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LibraryAPI.m; sourceTree = "<group>"; };
+		CC37323D1E9F047A0006E6F7 /* PersistencyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersistencyManager.h; sourceTree = "<group>"; };
+		CC37323E1E9F047A0006E6F7 /* PersistencyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersistencyManager.m; sourceTree = "<group>"; };
+		CC3732401E9F06D90006E6F7 /* HTTPClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HTTPClient.h; sourceTree = "<group>"; };
+		CC3732411E9F06D90006E6F7 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
+		CC3732431E9F1FC30006E6F7 /* Album+TableRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Album+TableRepresentation.h"; sourceTree = "<group>"; };
+		CC3732441E9F1FC30006E6F7 /* Album+TableRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Album+TableRepresentation.m"; sourceTree = "<group>"; };
 		CC5F8A4D1E71128C00857008 /* DianDianDiDi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DianDianDiDi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5F8A511E71128C00857008 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC5F8A531E71128C00857008 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -127,6 +145,59 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		CC37322F1E9EFC090006E6F7 /* Design Pattern */ = {
+			isa = PBXGroup;
+			children = (
+				CC3732391E9EFF310006E6F7 /* Controller */,
+				CC3732381E9EFF2C0006E6F7 /* View */,
+				CC3732371E9EFF260006E6F7 /* Model */,
+				CC3732361E9EFF210006E6F7 /* API */,
+			);
+			name = "Design Pattern";
+			sourceTree = "<group>";
+		};
+		CC3732361E9EFF210006E6F7 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				CC37323A1E9EFFCE0006E6F7 /* LibraryAPI.h */,
+				CC37323B1E9EFFCE0006E6F7 /* LibraryAPI.m */,
+				CC37323D1E9F047A0006E6F7 /* PersistencyManager.h */,
+				CC37323E1E9F047A0006E6F7 /* PersistencyManager.m */,
+				CC3732401E9F06D90006E6F7 /* HTTPClient.h */,
+				CC3732411E9F06D90006E6F7 /* HTTPClient.m */,
+			);
+			name = API;
+			sourceTree = "<group>";
+		};
+		CC3732371E9EFF260006E6F7 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CC3732301E9EFC3E0006E6F7 /* Album.h */,
+				CC3732311E9EFC3E0006E6F7 /* Album.m */,
+				CC3732431E9F1FC30006E6F7 /* Album+TableRepresentation.h */,
+				CC3732441E9F1FC30006E6F7 /* Album+TableRepresentation.m */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		CC3732381E9EFF2C0006E6F7 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				CC3732331E9EFCF80006E6F7 /* AlbumView.h */,
+				CC3732341E9EFCF80006E6F7 /* AlbumView.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		CC3732391E9EFF310006E6F7 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				CC37322C1E9EFB7C0006E6F7 /* DesignPatternViewController.h */,
+				CC37322D1E9EFB7C0006E6F7 /* DesignPatternViewController.m */,
+			);
+			name = Controller;
+			sourceTree = "<group>";
+		};
 		CC5F8A441E71128B00857008 = {
 			isa = PBXGroup;
 			children = (
@@ -175,12 +246,11 @@
 		CC5F8A501E71128C00857008 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				CC37322F1E9EFC090006E6F7 /* Design Pattern */,
 				CC6C21421E7E2BB500BA7F66 /* MixScrollViewAndTableView */,
 				CC5F8A511E71128C00857008 /* main.m */,
 				CC6C21511E84B5C400BA7F66 /* ImageProcessingDemoViewController.h */,
 				CC6C21521E84B5C400BA7F66 /* ImageProcessingDemoViewController.m */,
-				CC37322C1E9EFB7C0006E6F7 /* DesignPatternViewController.h */,
-				CC37322D1E9EFB7C0006E6F7 /* DesignPatternViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -357,14 +427,20 @@
 				CC5F8A881E74A1E700857008 /* CustomizeCollectionViewController.m in Sources */,
 				CC5F8A551E71128C00857008 /* AppDelegate.m in Sources */,
 				CC5F8A521E71128C00857008 /* main.m in Sources */,
+				CC3732321E9EFC3E0006E6F7 /* Album.m in Sources */,
 				CC6C21451E7E2BE600BA7F66 /* HeaderView.m in Sources */,
 				CC37322E1E9EFB7C0006E6F7 /* DesignPatternViewController.m in Sources */,
+				CC3732421E9F06DA0006E6F7 /* HTTPClient.m in Sources */,
 				CC6C21531E84B5C400BA7F66 /* ImageProcessingDemoViewController.m in Sources */,
 				CCC293101E75D864005324D8 /* ParseServerDemoViewController.m in Sources */,
 				CC2781FA1E78F2C300DEC419 /* CoreAnimationViewController.m in Sources */,
+				CC3732351E9EFCF80006E6F7 /* AlbumView.m in Sources */,
+				CC37323C1E9EFFCE0006E6F7 /* LibraryAPI.m in Sources */,
+				CC3732451E9F1FC30006E6F7 /* Album+TableRepresentation.m in Sources */,
 				CC5F8A851E7115FA00857008 /* ListTableViewController.m in Sources */,
 				CC6C21411E7E1EAF00BA7F66 /* MixScrollViewAndTableViewController.m in Sources */,
 				CC6C21501E7F86F000BA7F66 /* CustomizedSegmentedControl.m in Sources */,
+				CC37323F1E9F047A0006E6F7 /* PersistencyManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

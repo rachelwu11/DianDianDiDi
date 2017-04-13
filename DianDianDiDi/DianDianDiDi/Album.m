@@ -16,6 +16,7 @@
         _artist = artist;
         _coverUrl = coverUrl;
         _year = year;
+        _genre = @"Pop";
     }
     return self;
 }

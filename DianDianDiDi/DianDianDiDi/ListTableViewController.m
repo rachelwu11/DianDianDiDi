@@ -12,6 +12,7 @@
 #import "CoreAnimationViewController.h"
 #import "MixScrollViewAndTableViewController.h"
 #import "ImageProcessingDemoViewController.h"
+#import "DesignPatternViewController.h"
 
 @interface ListTableViewController ()
 
@@ -108,6 +109,8 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
         vc = [[MixScrollViewAndTableViewController alloc] init];
     } else if ([titleOfRow containsString:@"Image Processing"]) {
         vc = [[ImageProcessingDemoViewController alloc] init];
+    } else if ([titleOfRow containsString:@"iOS Design Pattern"]) {
+        vc = [[DesignPatternViewController alloc] init];
     }
 
     [self.navigationController pushViewController:vc animated:YES];

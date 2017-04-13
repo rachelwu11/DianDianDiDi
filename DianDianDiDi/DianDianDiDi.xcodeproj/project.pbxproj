@@ -11,6 +11,7 @@
 		CC2781F61E77B1CA00DEC419 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2781F31E77B1CA00DEC419 /* Parse.framework */; };
 		CC2781F71E77B1CA00DEC419 /* ParseUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CC2781F41E77B1CA00DEC419 /* ParseUI.framework */; };
 		CC2781FA1E78F2C300DEC419 /* CoreAnimationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC2781F91E78F2C300DEC419 /* CoreAnimationViewController.m */; };
+		CC37322E1E9EFB7C0006E6F7 /* DesignPatternViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37322D1E9EFB7C0006E6F7 /* DesignPatternViewController.m */; };
 		CC5F8A521E71128C00857008 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A511E71128C00857008 /* main.m */; };
 		CC5F8A551E71128C00857008 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A541E71128C00857008 /* AppDelegate.m */; };
 		CC5F8A5B1E71128C00857008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5F8A591E71128C00857008 /* Main.storyboard */; };
@@ -53,6 +54,8 @@
 		CC2781F41E77B1CA00DEC419 /* ParseUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ParseUI.framework; path = Framework/ParseUI.framework; sourceTree = "<group>"; };
 		CC2781F81E78F2C300DEC419 /* CoreAnimationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreAnimationViewController.h; sourceTree = "<group>"; };
 		CC2781F91E78F2C300DEC419 /* CoreAnimationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreAnimationViewController.m; sourceTree = "<group>"; };
+		CC37322C1E9EFB7C0006E6F7 /* DesignPatternViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DesignPatternViewController.h; sourceTree = "<group>"; };
+		CC37322D1E9EFB7C0006E6F7 /* DesignPatternViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DesignPatternViewController.m; sourceTree = "<group>"; };
 		CC5F8A4D1E71128C00857008 /* DianDianDiDi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DianDianDiDi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5F8A511E71128C00857008 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC5F8A531E71128C00857008 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -176,6 +179,8 @@
 				CC5F8A511E71128C00857008 /* main.m */,
 				CC6C21511E84B5C400BA7F66 /* ImageProcessingDemoViewController.h */,
 				CC6C21521E84B5C400BA7F66 /* ImageProcessingDemoViewController.m */,
+				CC37322C1E9EFB7C0006E6F7 /* DesignPatternViewController.h */,
+				CC37322D1E9EFB7C0006E6F7 /* DesignPatternViewController.m */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -353,6 +358,7 @@
 				CC5F8A551E71128C00857008 /* AppDelegate.m in Sources */,
 				CC5F8A521E71128C00857008 /* main.m in Sources */,
 				CC6C21451E7E2BE600BA7F66 /* HeaderView.m in Sources */,
+				CC37322E1E9EFB7C0006E6F7 /* DesignPatternViewController.m in Sources */,
 				CC6C21531E84B5C400BA7F66 /* ImageProcessingDemoViewController.m in Sources */,
 				CCC293101E75D864005324D8 /* ParseServerDemoViewController.m in Sources */,
 				CC2781FA1E78F2C300DEC419 /* CoreAnimationViewController.m in Sources */,

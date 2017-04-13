@@ -19,11 +19,11 @@
 -(id)init {
     if (self = [super init]) {
         self.albums = [NSMutableArray arrayWithArray:
-                       @[[[Album alloc] initWithTitle:@"Best of Bowie" artist:@"David Bowie" coverUrl:@"http://www.coversproject.com/static/thumbs/album/album_david%20bowie_best%20of%20bowie.png" year:@"1992"],
-                         [[Album alloc] initWithTitle:@"It's My Life" artist:@"No Doubt" coverUrl:@"http://www.coversproject.com/static/thumbs/album/album_no%20doubt_its%20my%20life%20%20bathwater.png" year:@"2003"],
-                         [[Album alloc] initWithTitle:@"Nothing Like The Sun" artist:@"Sting" coverUrl:@"http://www.coversproject.com/static/thumbs/album/album_sting_nothing%20like%20the%20sun.png" year:@"1999"],
-                         [[Album alloc] initWithTitle:@"Staring at the Sun" artist:@"U2" coverUrl:@"http://www.coversproject.com/static/thumbs/album/album_u2_staring%20at%20the%20sun.png" year:@"2000"],
-                         [[Album alloc] initWithTitle:@"American Pie" artist:@"Madonna" coverUrl:@"http://www.coversproject.com/static/thumbs/album/album_madonna_american%20pie.png" year:@"2000"]]];
+                       @[[[Album alloc] initWithTitle:@"Abbey Road" artist:@"The Beatles" coverUrl:@"http://5.darkroom.shortlist.com/90/d6e7abc85e5b02b0c9578324a203aa12:b4a124b1b1a81be1152fabd58591b81f/abbey-road" year:@"1992"],
+                         [[Album alloc] initWithTitle:@"1984" artist:@"Van Halen" coverUrl:@"http://6.darkroom.shortlist.com/90/450ef12c83ded58c54dc9baf2ad717de:3a54b01d79575bf6bc43f746d03c9e67/1984" year:@"2003"],
+                         [[Album alloc] initWithTitle:@"Agetis Byrjun" artist:@"Sigur Ros" coverUrl:@"http://1.darkroom.shortlist.com/90/34cf13c65a1a164802d37f78ef4202e8:21004fc030bfc7fa7bd74927ff6c0e44/agaetis-byrjun" year:@"1999"],
+                         [[Album alloc] initWithTitle:@"American IV: The man comes around" artist:@"Johnny Cash" coverUrl:@"http://2.darkroom.shortlist.com/90/a39e3be28a7392f1f208a1ece0993e49:cd34afb6141117e4673264d6f876adc6/american-iv-the-man-comes-around" year:@"2000"],
+                         [[Album alloc] initWithTitle:@"Draft 7.30" artist:@"Autechre" coverUrl:@"http://3.darkroom.shortlist.com/90/8ac5a8652347d27bc08c709988ed8884:5aabde30eb606442eab15bdf2e191018/draft-7.30" year:@"2000"]]];
     }
     return self;
 }

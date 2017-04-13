@@ -18,6 +18,7 @@
 		CC37323F1E9F047A0006E6F7 /* PersistencyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = CC37323E1E9F047A0006E6F7 /* PersistencyManager.m */; };
 		CC3732421E9F06DA0006E6F7 /* HTTPClient.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3732411E9F06D90006E6F7 /* HTTPClient.m */; };
 		CC3732451E9F1FC30006E6F7 /* Album+TableRepresentation.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3732441E9F1FC30006E6F7 /* Album+TableRepresentation.m */; };
+		CC3732481E9F9A2F0006E6F7 /* HorizontalScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = CC3732471E9F9A2F0006E6F7 /* HorizontalScroller.m */; };
 		CC5F8A521E71128C00857008 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A511E71128C00857008 /* main.m */; };
 		CC5F8A551E71128C00857008 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = CC5F8A541E71128C00857008 /* AppDelegate.m */; };
 		CC5F8A5B1E71128C00857008 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CC5F8A591E71128C00857008 /* Main.storyboard */; };
@@ -74,6 +75,8 @@
 		CC3732411E9F06D90006E6F7 /* HTTPClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HTTPClient.m; sourceTree = "<group>"; };
 		CC3732431E9F1FC30006E6F7 /* Album+TableRepresentation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Album+TableRepresentation.h"; sourceTree = "<group>"; };
 		CC3732441E9F1FC30006E6F7 /* Album+TableRepresentation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Album+TableRepresentation.m"; sourceTree = "<group>"; };
+		CC3732461E9F9A2F0006E6F7 /* HorizontalScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HorizontalScroller.h; sourceTree = "<group>"; };
+		CC3732471E9F9A2F0006E6F7 /* HorizontalScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HorizontalScroller.m; sourceTree = "<group>"; };
 		CC5F8A4D1E71128C00857008 /* DianDianDiDi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DianDianDiDi.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5F8A511E71128C00857008 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		CC5F8A531E71128C00857008 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -185,6 +188,8 @@
 			children = (
 				CC3732331E9EFCF80006E6F7 /* AlbumView.h */,
 				CC3732341E9EFCF80006E6F7 /* AlbumView.m */,
+				CC3732461E9F9A2F0006E6F7 /* HorizontalScroller.h */,
+				CC3732471E9F9A2F0006E6F7 /* HorizontalScroller.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -429,6 +434,7 @@
 				CC5F8A521E71128C00857008 /* main.m in Sources */,
 				CC3732321E9EFC3E0006E6F7 /* Album.m in Sources */,
 				CC6C21451E7E2BE600BA7F66 /* HeaderView.m in Sources */,
+				CC3732481E9F9A2F0006E6F7 /* HorizontalScroller.m in Sources */,
 				CC37322E1E9EFB7C0006E6F7 /* DesignPatternViewController.m in Sources */,
 				CC3732421E9F06DA0006E6F7 /* HTTPClient.m in Sources */,
 				CC6C21531E84B5C400BA7F66 /* ImageProcessingDemoViewController.m in Sources */,

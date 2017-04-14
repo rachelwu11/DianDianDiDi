@@ -33,6 +33,9 @@ static NSString *cellIdentifier = @"demoListCellIdentifier";
 
     [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:cellIdentifier];
 
+    //bug fix, Nav bar covers view, IOS 7 by default all Controller translucent property value is YES
+    self.navigationController.navigationBar.translucent = NO;
+
 }
 
 -(void)loadJsonData {

@@ -34,6 +34,8 @@
         persistencyManager = [[PersistencyManager alloc] init];
         httpClient = [[HTTPClient alloc] init];
         isOnline = NO;
+
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(downloadImage:) name:@"BLDownloadImageNotification" object:nil];
     }
     return self;
 }
@@ -55,6 +57,26 @@
     if (isOnline) {
         [httpClient postRequest:@"api/deleteAlbum" body:[@(index) description]];
     }
+}
+
+-(void)downloadImage:(NSNotification *)notification {
+    UIImageView *imageView = notification.userInfo[@"imageView"];
+    NSString *coverUrl = notification.userInfo[@"coverUrl"];
+    imageView.image = [persistencyManager getImage:[coverUrl lastPathComponent]];
+
+    if (imageView.image == nil) {
+        dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+            UIImage *image = [httpClient downloadImage:coverUrl];
+            dispatch_async(dispatch_get_main_queue(), ^{
+                imageView.image = image;
+                [persistencyManager saveImage:image filename:[coverUrl lastPathComponent]];
+            });
+        });
+    }
+}
+
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

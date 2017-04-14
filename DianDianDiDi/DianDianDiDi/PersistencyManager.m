@@ -45,4 +45,16 @@
     [self.albums removeObjectAtIndex:index];
 }
 
+-(void)saveImage:(UIImage *)image filename:(NSString *)filename {
+    filename = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@",filename];
+    NSData *data = UIImagePNGRepresentation(image);
+    [data writeToFile:filename atomically:YES];
+}
+
+-(UIImage *)getImage:(NSString *)filename {
+    filename = [NSHomeDirectory() stringByAppendingFormat:@"/Documents/%@", filename];
+    NSData *data = [NSData dataWithContentsOfFile:filename];
+    return [UIImage imageWithData:data];
+}
+
 @end
